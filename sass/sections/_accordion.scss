@@ -1,0 +1,15 @@
+.accordion-container {
+  margin: 70px 0;
+  @include container($tiny);
+
+  .ac {
+  }
+  .ac-header {
+  }
+  .ac-trigger {
+  }
+  .ac-panel {
+  }
+  .ac-text {
+  }
+}

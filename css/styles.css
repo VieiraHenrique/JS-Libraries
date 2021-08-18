@@ -1,0 +1,172 @@
+/* UTILITIES */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background: #232323;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  display: block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100px;
+  background: #ffb43c;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 70px;
+  color: #fff;
+  background: #111;
+  margin-top: 40px;
+}
+
+.swiper-container {
+  width: 100vw;
+  height: 500px;
+  position: relative;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 81.66667px)) minmax(20px, 1fr);
+  color: #fff;
+  align-items: center;
+}
+
+.swiper-slide > * {
+  grid-column: 2/14;
+}
+
+.swiper-slide h2 {
+  font-size: 60px;
+}
+
+.swiper-slide p {
+  color: #e7e7e7;
+  max-width: 50%;
+}
+
+.swiper-pagination {
+  display: flex;
+  position: static;
+}
+
+.swiper-pagination span {
+  all: unset;
+  border: 1px solid #fff;
+  width: 60px;
+  height: 60px;
+  display: block;
+  background: #3569ad;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #193d6d;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  all: unset;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  background: #ffb43c;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+  width: 20px;
+}
+
+.swiper-button-prev {
+  right: 60px;
+}
+
+.numbers {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  z-index: 1;
+}
+
+.accordion-container {
+  margin: 70px 0;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 64px)) minmax(20px, 1fr);
+}
+
+.accordion-container > * {
+  grid-column: 2/14;
+}
+/*# sourceMappingURL=styles.css.map */

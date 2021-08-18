@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS LIBRARIES</title>
+    <link rel="stylesheet" href="components/swiper.css" />
+    <link rel="stylesheet" href="components/accordion.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!--
+    SWIPER
+    structure:
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                .swiper-slide
+                .swiper-slide
+
+    If we need, we can use :
+        .swiper-pagination
+        .swiper-button-prev
+        .swiper-button-next
+        .swiper-scrollbar
+    These don't need to be in the swiper container. Only make sure you call them in the JS ny their name.
+
+-->
+
+    <section class="swiper">
+      <h2 class="title">SWIPER</h2>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            style="
+              background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+                ),
+                url('img/slide1.jpg');
+            "
+          >
+            <div class="wrapper">
+              <h2>Slide One</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur dolore eos ipsum totam voluptatum.
+              </p>
+              <a href="#" class="btn">I'm a button</a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="
+              background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+                ),
+                url('img/slide2.jpg');
+            "
+          >
+            <div class="wrapper">
+              <h2>Slide Two</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus, at expedita. Sunt tempore libero, maiores dolorem
+                omnis beatae!
+              </p>
+              <a href="#" class="btn">I'm a button</a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            style="
+              background-image: linear-gradient(
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.6)
+                ),
+                url('img/slide3.jpg');
+            "
+          >
+            <div class="wrapper">
+              <h2>Slide Three</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+              <a href="#" class="btn">I'm a button</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <img src="/img/arrow_left.png" alt="left" />
+        </div>
+        <div class="swiper-button-next">
+          <img src="/img/arrow_right.png" alt="left" />
+        </div>
+        <p class="numbers">
+          Slide <span class="from"></span> of <span class="of"></span>
+        </p>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <!--
+
+        ACCORDION
+
+        structure:
+          .accordion-container
+            .ac
+              .ac-header
+                button.ac-trigger
+              .ac-panel
+                .ac-text
+
+        No JS to config. Just initialize it :
+          <script> new Accordion(".accordion-container"); </script>
+        
+        Tweak the CSS to style it as you wish.
+    -->
+
+    <section class="accordion">
+      <h2 class="title">ACCORDION</h2>
+      <div class="accordion-container">
+        <div class="ac">
+          <h2 class="ac-header">
+            <button class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+          </h2>
+          <div class="ac-panel">
+            <p class="ac-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+
+        <div class="ac">
+          <h2 class="ac-header">
+            <button class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+          </h2>
+          <div class="ac-panel">
+            <p class="ac-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+
+        <div class="ac">
+          <h2 class="ac-header">
+            <button class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+          </h2>
+          <div class="ac-panel">
+            <p class="ac-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CDN -->
+
+    <script src="js/components/swiper.js"></script>
+    <script src="js/components/accordion.js"></script>
+
+    <!-- SCRIPTS -->
+
+    <script src="js/sections/_swiper.js"></script>
+    <script src="js/sections/_accordion.js"></script>
+  </body>
+</html>

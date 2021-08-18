@@ -1,0 +1,88 @@
+/* UTILITIES */
+
+@mixin pseudo($display: block, $position: absolute) {
+  content: "";
+  display: $display;
+  position: $position;
+}
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin grid($colums, $columns-gap: 0, $row-gap: 0) {
+  display: grid;
+  grid-template-columns: $colums;
+  column-gap: $columns-gap;
+  row-gap: $row-gap;
+}
+
+$small: 1024px;
+$tiny: 768px;
+
+@mixin container($max-width: 1440px) {
+  display: grid;
+  grid-template-columns:
+    minmax(20px, 1fr) repeat(12, minmax(22px, $max-width / 12))
+    minmax(20px, 1fr);
+  > * {
+    grid-column: 2/14;
+  }
+}
+
+@mixin shadow($a: -2px, $b: 2px, $c: 10px, $d: 0.05) {
+  box-shadow: $a $b $c rgba($color: #000000, $alpha: $d);
+}
+
+@mixin transition($time: 0.4s, $interpolation: ease) {
+  transition: $time $interpolation;
+}
+
+@mixin imgWrapper($position: center center) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: $position;
+}
+
+@mixin fullSize {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin btn($width, $height, $radius, $bg, $color) {
+  display: block;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  border-radius: $radius;
+  background: $bg;
+  color: $color;
+  cursor: pointer;
+  @include transition();
+}
+
+@mixin overlayBG($url, $opacity, $position: center center) {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, $opacity),
+      rgba(0, 0, 0, $opacity)
+    ),
+    url($url);
+  background-position: $position;
+}
+
+@mixin bgPref {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@mixin widthFit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
