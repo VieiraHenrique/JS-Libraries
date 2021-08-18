@@ -5,8 +5,6 @@ https://swiperjs.com/swiper-api
 
 */
 
-alert("test");
-
 const from = document.querySelector(".from");
 const of = document.querySelector(".of");
 

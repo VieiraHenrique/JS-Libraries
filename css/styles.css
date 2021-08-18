@@ -5,7 +5,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   line-height: 1;
 }
 
@@ -54,8 +55,10 @@ textarea {
   background: #ffb43c;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
-  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -63,6 +66,7 @@ textarea {
   color: #fff;
   background: #111;
   margin-top: 40px;
+  text-align: center;
 }
 
 .swiper-container {
@@ -81,13 +85,19 @@ textarea {
   height: 100%;
   background-position: center center;
   background-size: cover;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 81.66667px)) minmax(20px, 1fr);
+  -ms-grid-columns: minmax(20px, 1fr) (minmax(22px, 81.66667px))[12] minmax(20px, 1fr);
+      grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 81.66667px)) minmax(20px, 1fr);
   color: #fff;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .swiper-slide > * {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
   grid-column: 2/14;
 }
 
@@ -101,6 +111,8 @@ textarea {
 }
 
 .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: static;
 }
@@ -112,6 +124,7 @@ textarea {
   height: 60px;
   display: block;
   background: #3569ad;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   color: #fff;
@@ -133,6 +146,7 @@ textarea {
   width: 60px;
   height: 60px;
   background: #ffb43c;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -162,11 +176,15 @@ textarea {
 
 .accordion-container {
   margin: 70px 0;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 64px)) minmax(20px, 1fr);
+  -ms-grid-columns: minmax(20px, 1fr) (minmax(22px, 64px))[12] minmax(20px, 1fr);
+      grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 64px)) minmax(20px, 1fr);
 }
 
 .accordion-container > * {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
   grid-column: 2/14;
 }
 /*# sourceMappingURL=styles.css.map */
