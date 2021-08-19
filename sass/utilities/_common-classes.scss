@@ -1,0 +1,12 @@
+.btn {
+  @include btn(150px, 50px, 100px, $orange, #fff);
+  @include shadow(5px, 10px, 15px, 0.5);
+}
+
+.title {
+  font-size: 70px;
+  color: $white;
+  background: #111;
+  margin-top: 40px;
+  text-align: center;
+}

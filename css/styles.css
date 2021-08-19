@@ -31,7 +31,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #00bac7;
+  background-color: #3569ad;
   /* color of the scroll thumb */
   border-radius: 20px;
   /* roundness of the scroll thumb */
@@ -90,6 +90,7 @@ textarea {
 
 .swiper-container {
   width: 100vw;
+  max-width: 100%;
   height: 500px;
   position: relative;
 }

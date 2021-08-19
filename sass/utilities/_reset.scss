@@ -26,7 +26,7 @@ body::-webkit-scrollbar-track {
   background: #232323; /* color of the tracking area */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 186, 199); /* color of the scroll thumb */
+  background-color: $blue; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   /* border: 3px solid orange; */ /* creates padding around scroll thumb */
 }
@@ -54,17 +54,4 @@ textarea {
   padding: 1rem;
   border: none;
   outline: none;
-}
-
-.btn {
-  @include btn(150px, 50px, 100px, $orange, #fff);
-  @include shadow(5px, 10px, 15px, 0.5);
-}
-
-.title {
-  font-size: 70px;
-  color: $white;
-  background: #111;
-  margin-top: 40px;
-  text-align: center;
 }

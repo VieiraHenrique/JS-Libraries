@@ -9,9 +9,10 @@
  */
 .ac {
   margin-top: 10px;
-  border: 1px solid #eee;
-  background-color: #fff;
+
+  background-color: rgb(61, 97, 216);
   box-sizing: border-box;
+  border-radius: 20px;
 }
 .ac .ac-header {
   margin: 0;
@@ -19,7 +20,7 @@
 }
 .ac .ac-trigger {
   font: bold 16px Arial, sans-serif;
-  color: #111;
+  color: #fff;
   text-align: left;
   width: 100%;
   padding: 10px 30px 10px 10px;
@@ -34,6 +35,7 @@
   border: 0;
 }
 .ac .ac-trigger::after {
+  font-size: 22px;
   content: "+";
   text-align: center;
   width: 15px;
@@ -44,9 +46,12 @@
   top: 50%;
 }
 .ac .ac-trigger:focus {
-  color: #8a8a8a;
+  /* color: #8a8a8a; */
 }
 .ac .ac-panel {
+  background: #fff;
+  border-radius: 20px;
+
   overflow: hidden;
   -webkit-transition-property: height, visibility;
   transition-property: height, visibility;
@@ -58,6 +63,7 @@
   color: #111;
   padding: 10px;
   margin: 0;
+  padding: 20px;
 }
 .ac.js-enabled .ac-panel {
   visibility: hidden;
