@@ -1,0 +1,15 @@
+.isotope {
+  .wrapper {
+    @include container($tiny);
+    margin: 30px 0;
+  }
+
+  .button {
+    border: none;
+    padding: 10px 30px;
+  }
+
+  .grid {
+    color: $white;
+  }
+}

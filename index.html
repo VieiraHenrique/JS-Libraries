@@ -167,8 +167,42 @@
       </div>
     </section>
 
+    <!--
+
+      ISOTOPE
+
+      structure:
+
+        .button-group.filters-button-group
+          button.button (data-filter=".class")
+
+        .grid
+          .grid-item
+      
+      Copy js from "/sections/isotope.js"
+      in the data-filter, put the class of the elements
+      For 'all', put a *
+    -->
+
     <section class="isotope">
       <h2 class="title">ISOTOPE</h2>
+      <div class="wrapper">
+        <div class="button-group filters-button-group">
+          <button class="button" data-filter=".one">one</button>
+          <button class="button" data-filter=".two">two</button>
+          <button class="button" data-filter=".three">three</button>
+          <button class="button" data-filter="*">all</button>
+        </div>
+
+        <div class="grid">
+          <div class="element-item one">Element one</div>
+          <div class="element-item two">Element two</div>
+          <div class="element-item three">Element three</div>
+          <div class="element-item one">Element one</div>
+          <div class="element-item two">Element two</div>
+          <div class="element-item three">Element three</div>
+        </div>
+      </div>
     </section>
 
     <!-- CDN -->
@@ -181,5 +215,6 @@
 
     <script src="js/sections/swiper.js"></script>
     <script src="js/sections/accordion.js"></script>
+    <script src="js/sections/isotope.js"></script>
   </body>
 </html>
