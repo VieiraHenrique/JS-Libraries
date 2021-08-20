@@ -1,0 +1,24 @@
+.aos {
+  @include container($small);
+
+  .title {
+    grid-column: 1/-1;
+  }
+
+  .wrapper {
+    margin-top: 60px;
+    .card {
+      margin-bottom: 50px;
+      background: $white;
+      color: $black;
+      padding: 30px;
+      max-width: 360px;
+      margin-right: auto;
+
+      &:nth-child(2n) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+}

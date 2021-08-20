@@ -7,9 +7,30 @@
   .button {
     border: none;
     padding: 10px 30px;
+    background: transparent;
+    border-radius: 100px;
+    border: 2px solid $blue;
+    color: $blue;
+    @include transition;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: $blue;
+      color: $white;
+    }
   }
 
   .grid {
     color: $white;
+    margin-top: 30px;
+
+    .element-item {
+      background: #eaeaea;
+      color: $black;
+      padding: 40px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
   }
 }

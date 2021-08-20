@@ -204,9 +204,82 @@ textarea {
 .isotope .button {
   border: none;
   padding: 10px 30px;
+  background: transparent;
+  border-radius: 100px;
+  border: 2px solid #3569ad;
+  color: #3569ad;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.isotope .button:hover, .isotope .button:focus {
+  background: #3569ad;
+  color: #fff;
 }
 
 .isotope .grid {
   color: #fff;
+  margin-top: 30px;
+}
+
+.isotope .grid .element-item {
+  background: #eaeaea;
+  color: #232323;
+  padding: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.aos {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 85.33333px)) minmax(20px, 1fr);
+}
+
+.aos > * {
+  grid-column: 2/14;
+}
+
+.aos .title {
+  grid-column: 1/-1;
+}
+
+.aos .wrapper {
+  margin-top: 60px;
+}
+
+.aos .wrapper .card {
+  margin-bottom: 50px;
+  background: #fff;
+  color: #232323;
+  padding: 30px;
+  max-width: 360px;
+  margin-right: auto;
+}
+
+.aos .wrapper .card:nth-child(2n) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.popper {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 85.33333px)) minmax(20px, 1fr);
+}
+
+.popper > * {
+  grid-column: 2/14;
+}
+
+.popper .title {
+  grid-column: 1/-1;
+}
+
+.popper .wrapper {
+  margin: 60px 0;
+}
+
+.popper a {
+  color: #fff;
+  cursor: help;
 }
 /*# sourceMappingURL=styles.css.map */

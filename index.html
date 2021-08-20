@@ -7,6 +7,8 @@
     <title>JS LIBRARIES</title>
     <link rel="stylesheet" href="components/swiper.css" />
     <link rel="stylesheet" href="components/accordion.css" />
+    <link rel="stylesheet" href="components/aos.css" />
+    <link rel="stylesheet" href="components/popper.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -182,6 +184,12 @@
       Copy js from "/sections/isotope.js"
       in the data-filter, put the class of the elements
       For 'all', put a *
+
+      There is no css of the library. We can change de css of the elements whitout conflicts ;)
+
+      tips:
+      if we want to style the button selected, use button:focus
+      
     -->
 
     <section class="isotope">
@@ -205,16 +213,100 @@
       </div>
     </section>
 
+    <!--
+      
+      AOS
+    
+      to initialize it, just create a js file with :
+        AOS.init();
+      
+      All we have to do is put a "data-aos" on the div we want to animate
+
+      eg: <div data-aos="fade-up"> content </div>
+
+      Check documentation for all options.
+      https://michalsnik.github.io/aos/
+      
+
+    -->
+
+    <section class="aos">
+      <h2 class="title">AOS</h2>
+      <div class="wrapper">
+        <div
+          class="card"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-offset="200"
+        >
+          <h3>Card title</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
+            sunt assumenda? Velit, at fugit!
+          </p>
+          <a href="#" class="btn">Click me</a>
+        </div>
+        <div
+          class="card"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-offset="200"
+        >
+          <h3>Card title</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
+            sunt assumenda? Velit, at fugit!
+          </p>
+          <a href="#" class="btn">Click me</a>
+        </div>
+        <div
+          class="card"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-offset="200"
+        >
+          <h3>Card title</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
+            sunt assumenda? Velit, at fugit!
+          </p>
+          <a href="#" class="btn">Click me</a>
+        </div>
+        <div
+          class="card"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-offset="200"
+        >
+          <h3>Card title</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
+            sunt assumenda? Velit, at fugit!
+          </p>
+          <a href="#" class="btn">Click me</a>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      TIPPY
+
+    -->
+
     <!-- CDN -->
 
     <script src="js/components/swiper.js"></script>
     <script src="js/components/accordion.js"></script>
     <script src="js/components/isotope.js"></script>
+    <script src="js/components/aos.js"></script>
+    <script src="js/components/popper.js"></script>
 
     <!-- SCRIPTS -->
 
     <script src="js/sections/swiper.js"></script>
     <script src="js/sections/accordion.js"></script>
     <script src="js/sections/isotope.js"></script>
+    <script src="js/sections/aos.js"></script>
+    <script src="js/sections/popper.js"></script>
   </body>
 </html>
