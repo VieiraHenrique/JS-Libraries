@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS LIBRARIES</title>
-    <link rel="stylesheet" href="components/swiper.css" />
-    <link rel="stylesheet" href="components/accordion.css" />
-    <link rel="stylesheet" href="components/aos.css" />
-    <link rel="stylesheet" href="components/popper.css" />
+    <link rel="stylesheet" href="libraries-css/swiper.css" />
+    <link rel="stylesheet" href="libraries-css/accordion.css" />
+    <link rel="stylesheet" href="libraries-css/aos.css" />
+    <link rel="stylesheet" href="libraries-css/tippy.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -291,15 +291,51 @@
     <!--
       TIPPY
 
+      In a particular element with a class (.tooltip for example) referenced by the JS, put:
+        data-tippy-content="content"
+      
+      In the JS:
+
+
+    -->
+
+    <section class="tippy">
+      <h2 class="title">TIPPY</h2>
+      <div class="wrapper">
+        <h3>Example. Hover over the blue text</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur
+          <span
+            class="tiptool"
+            data-tippy-content="Some word in latin Some word in latin"
+            >adipisicing</span
+          >
+          elit. Eveniet, magni quia totam hic ex excepturi!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
+          quaerat adipisci
+          <span class="tiptool" data-tippy-content="Henrique est un génie"
+            >consequatur</span
+          >
+          debitis itaque ab eum, minus vitae quasi eaque odit magni quo rem.
+        </p>
+      </div>
+    </section>
+
+    <!--
+      CONTAINER
+      
     -->
 
     <!-- CDN -->
 
-    <script src="js/components/swiper.js"></script>
-    <script src="js/components/accordion.js"></script>
-    <script src="js/components/isotope.js"></script>
-    <script src="js/components/aos.js"></script>
-    <script src="js/components/popper.js"></script>
+    <script src="js/libraries/swiper.js"></script>
+    <script src="js/libraries/accordion.js"></script>
+    <script src="js/libraries/isotope.js"></script>
+    <script src="js/libraries/aos.js"></script>
+    <script src="js/libraries/popper.js"></script>
+    <script src="js/libraries/tippy.js"></script>
 
     <!-- SCRIPTS -->
 
@@ -307,6 +343,6 @@
     <script src="js/sections/accordion.js"></script>
     <script src="js/sections/isotope.js"></script>
     <script src="js/sections/aos.js"></script>
-    <script src="js/sections/popper.js"></script>
+    <script src="js/sections/tippy.js"></script>
   </body>
 </html>

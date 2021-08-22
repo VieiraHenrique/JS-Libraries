@@ -86,3 +86,10 @@ $tiny: 768px;
   width: -moz-fit-content;
   width: fit-content;
 }
+
+@mixin separator($mt: 50px, $mb: 50px, $pt: 50px, $pb: 50px) {
+  margin-top: $mt;
+  margin-bottom: $mb;
+  padding-top: $pt;
+  padding-bottom: $pb;
+}

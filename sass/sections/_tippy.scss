@@ -1,0 +1,17 @@
+.tippy {
+  .wrapper {
+    @include container($tiny);
+    @include separator;
+    color: $black;
+    background: $white;
+
+    p {
+      color: #ccc;
+
+      span {
+        color: $blue;
+        cursor: default;
+      }
+    }
+  }
+}

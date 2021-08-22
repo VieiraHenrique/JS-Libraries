@@ -228,6 +228,7 @@ textarea {
   padding: 40px;
   margin-right: 10px;
   margin-bottom: 10px;
+  max-width: 150px;
 }
 
 .aos {
@@ -261,25 +262,27 @@ textarea {
   margin-right: 0;
 }
 
-.popper {
+.tippy .wrapper {
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 85.33333px)) minmax(20px, 1fr);
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 64px)) minmax(20px, 1fr);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #232323;
+  background: #fff;
 }
 
-.popper > * {
+.tippy .wrapper > * {
   grid-column: 2/14;
 }
 
-.popper .title {
-  grid-column: 1/-1;
+.tippy .wrapper p {
+  color: #ccc;
 }
 
-.popper .wrapper {
-  margin: 60px 0;
-}
-
-.popper a {
-  color: #fff;
-  cursor: help;
+.tippy .wrapper p span {
+  color: #3569ad;
+  cursor: default;
 }
 /*# sourceMappingURL=styles.css.map */
