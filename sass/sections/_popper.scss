@@ -1,0 +1,16 @@
+.popper {
+  @include container($small);
+
+  .title {
+    grid-column: 1/-1;
+  }
+
+  .wrapper {
+    margin: 60px 0;
+  }
+
+  a {
+    color: $white;
+    cursor: help;
+  }
+}

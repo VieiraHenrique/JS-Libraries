@@ -285,4 +285,36 @@ textarea {
   color: #3569ad;
   cursor: default;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 120px)) minmax(20px, 1fr);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container > * {
+  grid-column: 2/14;
+}
+
+.container .left {
+  grid-column: 1/10;
+  background: #3569ad;
+  color: #fff;
+  padding: 50px 10%;
+}
+
+.container .left p {
+  color: #e7e7e7;
+  margin: 10px 0 30px;
+  max-width: 70%;
+}
+
+.container .right {
+  grid-column: 10/-1;
+  background: #fff;
+  padding: 50px 10%;
+}
 /*# sourceMappingURL=styles.css.map */

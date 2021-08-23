@@ -1,0 +1,23 @@
+.container {
+  @include container;
+  @include separator;
+
+  .left {
+    grid-column: 1/10;
+    background: $blue;
+    color: $white;
+    padding: 50px 10%;
+
+    p {
+      color: $text;
+      margin: 10px 0 30px;
+      max-width: 70%;
+    }
+  }
+
+  .right {
+    grid-column: 10/-1;
+    background: $white;
+    padding: 50px 10%;
+  }
+}
