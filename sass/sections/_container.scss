@@ -3,10 +3,11 @@
   @include separator;
 
   .left {
-    grid-column: 1/10;
+    grid-column: full-start/ col-end 10;
     background: $blue;
     color: $white;
     padding: 50px 10%;
+    grid-row: 1;
 
     p {
       color: $text;
@@ -16,8 +17,9 @@
   }
 
   .right {
-    grid-column: 10/-1;
+    grid-column: col-start 11 / full-end;
     background: $white;
     padding: 50px 10%;
+    grid-row: 1;
   }
 }

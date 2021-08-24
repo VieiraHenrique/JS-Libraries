@@ -27,10 +27,15 @@ $tiny: 768px;
 @mixin container($max-width: 1440px) {
   display: grid;
   grid-template-columns:
-    minmax(20px, 1fr) repeat(12, minmax(22px, $max-width / 12))
-    minmax(20px, 1fr);
+    [full-start] minmax(20px, 1fr) [container-start] repeat(
+      12,
+      [col-start] minmax(22px, $max-width / 12) [col-end]
+    )
+    [container-end]
+    minmax(20px, 1fr) [full-end];
   > * {
-    grid-column: 2/14;
+    grid-column: container-start / container-end;
+    grid-row: 1;
   }
 }
 

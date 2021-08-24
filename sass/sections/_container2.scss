@@ -1,0 +1,62 @@
+.container2 {
+  @include separator;
+
+  .wrapper {
+    @include container;
+  }
+
+  .bg_left {
+    width: 100%;
+    height: 100%;
+    background: $blue;
+    grid-row: 1;
+    grid-column: 1/10;
+  }
+
+  .left {
+    @include flex(column, center, flex-start);
+    grid-row: 1;
+    grid-column: 2/10;
+
+    color: $white;
+
+    p {
+      color: $text;
+      margin: 10px 0 30px;
+      max-width: 70%;
+    }
+  }
+
+  .right {
+    color: $white;
+    grid-row: 1;
+    grid-column: 10/-2;
+  }
+
+  .wrapper2 {
+    @include container;
+    .bg_left {
+      width: 100%;
+      height: 100%;
+      background: $white;
+      grid-row: 1;
+      grid-column: 7/-1;
+    }
+
+    .left {
+      grid-row: 1;
+      grid-column: 2/7;
+    }
+
+    .right {
+      grid-row: 1;
+      grid-column: 7/-2;
+      color: $black;
+      @include flex(column, center, flex-end);
+
+      p {
+        max-width: 70%;
+      }
+    }
+  }
+}

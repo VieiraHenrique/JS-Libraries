@@ -103,13 +103,14 @@ textarea {
   background-position: center center;
   background-size: cover;
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 81.66667px)) minmax(20px, 1fr);
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 81.66667px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   color: #fff;
   align-items: center;
 }
 
 .swiper-slide > * {
-  grid-column: 2/14;
+  grid-column: container-start / container-end;
+  grid-row: 1;
 }
 
 .swiper-slide h2 {
@@ -184,21 +185,23 @@ textarea {
 .accordion-container {
   margin: 70px 0;
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 64px)) minmax(20px, 1fr);
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
 }
 
 .accordion-container > * {
-  grid-column: 2/14;
+  grid-column: container-start / container-end;
+  grid-row: 1;
 }
 
 .isotope .wrapper {
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 64px)) minmax(20px, 1fr);
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   margin: 30px 0;
 }
 
 .isotope .wrapper > * {
-  grid-column: 2/14;
+  grid-column: container-start / container-end;
+  grid-row: 1;
 }
 
 .isotope .button {
@@ -233,11 +236,12 @@ textarea {
 
 .aos {
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 85.33333px)) minmax(20px, 1fr);
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
 }
 
 .aos > * {
-  grid-column: 2/14;
+  grid-column: container-start / container-end;
+  grid-row: 1;
 }
 
 .aos .title {
@@ -264,7 +268,7 @@ textarea {
 
 .tippy .wrapper {
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 64px)) minmax(20px, 1fr);
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 50px;
@@ -274,7 +278,8 @@ textarea {
 }
 
 .tippy .wrapper > * {
-  grid-column: 2/14;
+  grid-column: container-start / container-end;
+  grid-row: 1;
 }
 
 .tippy .wrapper p {
@@ -288,7 +293,7 @@ textarea {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(12, minmax(22px, 120px)) minmax(20px, 1fr);
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 120px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 50px;
@@ -296,14 +301,16 @@ textarea {
 }
 
 .container > * {
-  grid-column: 2/14;
+  grid-column: container-start / container-end;
+  grid-row: 1;
 }
 
 .container .left {
-  grid-column: 1/10;
+  grid-column: full-start/ col-end 10;
   background: #3569ad;
   color: #fff;
   padding: 50px 10%;
+  grid-row: 1;
 }
 
 .container .left p {
@@ -313,8 +320,95 @@ textarea {
 }
 
 .container .right {
-  grid-column: 10/-1;
+  grid-column: col-start 11 / full-end;
   background: #fff;
   padding: 50px 10%;
+  grid-row: 1;
+}
+
+.container2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container2 .wrapper {
+  display: grid;
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 120px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+}
+
+.container2 .wrapper > * {
+  grid-column: container-start / container-end;
+  grid-row: 1;
+}
+
+.container2 .bg_left {
+  width: 100%;
+  height: 100%;
+  background: #3569ad;
+  grid-row: 1;
+  grid-column: 1/10;
+}
+
+.container2 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  grid-row: 1;
+  grid-column: 2/10;
+  color: #fff;
+}
+
+.container2 .left p {
+  color: #e7e7e7;
+  margin: 10px 0 30px;
+  max-width: 70%;
+}
+
+.container2 .right {
+  color: #fff;
+  grid-row: 1;
+  grid-column: 10/-2;
+}
+
+.container2 .wrapper2 {
+  display: grid;
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 120px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+}
+
+.container2 .wrapper2 > * {
+  grid-column: container-start / container-end;
+  grid-row: 1;
+}
+
+.container2 .wrapper2 .bg_left {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  grid-row: 1;
+  grid-column: 7/-1;
+}
+
+.container2 .wrapper2 .left {
+  grid-row: 1;
+  grid-column: 2/7;
+}
+
+.container2 .wrapper2 .right {
+  grid-row: 1;
+  grid-column: 7/-2;
+  color: #232323;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.container2 .wrapper2 .right p {
+  max-width: 70%;
 }
 /*# sourceMappingURL=styles.css.map */
