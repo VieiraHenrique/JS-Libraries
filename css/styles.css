@@ -1,3 +1,4 @@
+/* MEDIA QUERIES */
 /* UTILITIES */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
@@ -78,11 +79,17 @@ textarea {
 }
 
 .title {
-  font-size: 70px;
+  font-size: 40px;
   color: #fff;
   background: #111;
   margin-top: 40px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 70px;
+  }
 }
 
 .swiper-container {
@@ -110,7 +117,6 @@ textarea {
 
 .swiper-slide > * {
   grid-column: container-start / container-end;
-  grid-row: 1;
 }
 
 .swiper-slide h2 {
@@ -185,23 +191,21 @@ textarea {
 .accordion-container {
   margin: 70px 0;
   display: grid;
-  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
 }
 
 .accordion-container > * {
   grid-column: container-start / container-end;
-  grid-row: 1;
 }
 
 .isotope .wrapper {
   display: grid;
-  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 85.33333px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
   margin: 30px 0;
 }
 
 .isotope .wrapper > * {
   grid-column: container-start / container-end;
-  grid-row: 1;
 }
 
 .isotope .button {
@@ -241,7 +245,6 @@ textarea {
 
 .aos > * {
   grid-column: container-start / container-end;
-  grid-row: 1;
 }
 
 .aos .title {
@@ -279,7 +282,6 @@ textarea {
 
 .tippy .wrapper > * {
   grid-column: container-start / container-end;
-  grid-row: 1;
 }
 
 .tippy .wrapper p {
@@ -302,7 +304,6 @@ textarea {
 
 .container > * {
   grid-column: container-start / container-end;
-  grid-row: 1;
 }
 
 .container .left {
@@ -331,84 +332,83 @@ textarea {
   margin-bottom: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
+  height: 100%;
 }
 
 .container2 .wrapper {
   display: grid;
-  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 120px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 106.66667px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
+  height: 100%;
+  align-items: center;
 }
 
 .container2 .wrapper > * {
   grid-column: container-start / container-end;
-  grid-row: 1;
 }
 
-.container2 .bg_left {
-  width: 100%;
+.container2 .wrapper .bg_left {
   height: 100%;
+  width: 100%;
   background: #3569ad;
   grid-row: 1;
-  grid-column: 1/10;
+  grid-column: full-start/full-end;
 }
 
-.container2 .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0;
+@media screen and (min-width: 768px) {
+  .container2 .wrapper .bg_left {
+    border-radius: 0 0 300px 0;
+    grid-column: full-start / col-end 8;
+  }
+}
+
+.container2 .wrapper .left {
+  grid-column: container-start/container-end;
+  padding: 70px 0;
   grid-row: 1;
-  grid-column: 2/10;
+}
+
+@media screen and (min-width: 768px) {
+  .container2 .wrapper .left {
+    grid-column: container-start / col-end 8;
+    padding: 70px 45px;
+  }
+}
+
+.container2 .wrapper .left h2 {
+  font-size: 45px;
   color: #fff;
 }
 
-.container2 .left p {
+.container2 .wrapper .left p {
+  margin: 25px 0;
   color: #e7e7e7;
-  margin: 10px 0 30px;
-  max-width: 70%;
 }
 
-.container2 .right {
-  color: #fff;
-  grid-row: 1;
-  grid-column: 10/-2;
-}
-
-.container2 .wrapper2 {
-  display: grid;
-  grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 120px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
-}
-
-.container2 .wrapper2 > * {
-  grid-column: container-start / container-end;
-  grid-row: 1;
-}
-
-.container2 .wrapper2 .bg_left {
-  width: 100%;
+.container2 .wrapper .bg_right {
+  grid-column: full-start/full-end;
   height: 100%;
+  grid-row: 2;
   background: #fff;
-  grid-row: 1;
-  grid-column: 7/-1;
+  position: relative;
+  z-index: -1;
 }
 
-.container2 .wrapper2 .left {
-  grid-row: 1;
-  grid-column: 2/7;
+@media screen and (min-width: 768px) {
+  .container2 .wrapper .bg_right {
+    grid-row: 1;
+  }
 }
 
-.container2 .wrapper2 .right {
-  grid-row: 1;
-  grid-column: 7/-2;
-  color: #232323;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 0;
+.container2 .wrapper .right {
+  padding: 70px 0;
+  grid-column: container-start/ container-end;
+  grid-row: 2;
 }
 
-.container2 .wrapper2 .right p {
-  max-width: 70%;
+@media screen and (min-width: 768px) {
+  .container2 .wrapper .right {
+    grid-row: 1;
+    grid-column: col-start 10 / container-end;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

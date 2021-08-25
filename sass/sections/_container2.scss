@@ -1,61 +1,62 @@
 .container2 {
   @include separator;
+  height: 100%;
 
   .wrapper {
-    @include container;
-  }
-
-  .bg_left {
-    width: 100%;
+    @include container(1280px);
     height: 100%;
-    background: $blue;
-    grid-row: 1;
-    grid-column: 1/10;
-  }
+    align-items: center;
 
-  .left {
-    @include flex(column, center, flex-start);
-    grid-row: 1;
-    grid-column: 2/10;
-
-    color: $white;
-
-    p {
-      color: $text;
-      margin: 10px 0 30px;
-      max-width: 70%;
-    }
-  }
-
-  .right {
-    color: $white;
-    grid-row: 1;
-    grid-column: 10/-2;
-  }
-
-  .wrapper2 {
-    @include container;
     .bg_left {
-      width: 100%;
       height: 100%;
-      background: $white;
+      width: 100%;
+      background: $blue;
       grid-row: 1;
-      grid-column: 7/-1;
+      grid-column: full-start/full-end;
+      @include ipad {
+        border-radius: 0 0 300px 0;
+        grid-column: full-start / col-end 8;
+      }
     }
 
     .left {
+      grid-column: container-start/container-end;
+      padding: 70px 0;
+      @include ipad {
+        grid-column: container-start / col-end 8;
+        padding: 70px 45px;
+      }
       grid-row: 1;
-      grid-column: 2/7;
+      h2 {
+        font-size: 45px;
+        color: $white;
+      }
+      p {
+        margin: 25px 0;
+        color: $text;
+      }
+    }
+
+    .bg_right {
+      grid-column: full-start/full-end;
+      height: 100%;
+      grid-row: 2;
+      background: $white;
+      position: relative;
+      z-index: -1;
+      @include ipad {
+        grid-row: 1;
+      }
     }
 
     .right {
-      grid-row: 1;
-      grid-column: 7/-2;
-      color: $black;
-      @include flex(column, center, flex-end);
+      padding: 70px 0;
+      grid-column: container-start/ container-end;
+      grid-row: 2;
 
-      p {
-        max-width: 70%;
+      @include ipad {
+        grid-row: 1;
+        grid-column: col-start 10 / container-end;
       }
     }
   }

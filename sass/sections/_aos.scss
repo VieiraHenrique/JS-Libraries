@@ -1,5 +1,5 @@
 .aos {
-  @include container($small);
+  @include container($ipadPro);
 
   .title {
     grid-column: 1/-1;

@@ -1,6 +1,6 @@
 .tippy {
   .wrapper {
-    @include container($tiny);
+    @include container($ipad);
     @include separator;
     color: $black;
     background: $white;

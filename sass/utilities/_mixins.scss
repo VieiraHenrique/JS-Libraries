@@ -1,3 +1,32 @@
+/* MEDIA QUERIES */
+
+@mixin ipad() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin ipadPro() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin laptop13() {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
 /* UTILITIES */
 
 @mixin pseudo($display: block, $position: absolute) {
@@ -21,8 +50,9 @@
   row-gap: $row-gap;
 }
 
-$small: 1024px;
-$tiny: 768px;
+$laptop: 1440px;
+$ipadPro: 1024px;
+$ipad: 768px;
 
 @mixin container($max-width: 1440px) {
   display: grid;
@@ -35,7 +65,6 @@ $tiny: 768px;
     minmax(20px, 1fr) [full-end];
   > * {
     grid-column: container-start / container-end;
-    grid-row: 1;
   }
 }
 

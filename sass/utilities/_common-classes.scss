@@ -4,9 +4,13 @@
 }
 
 .title {
-  font-size: 70px;
+  font-size: 40px;
   color: $white;
   background: #111;
   margin-top: 40px;
   text-align: center;
+
+  @include ipad {
+    font-size: 70px;
+  }
 }
