@@ -1,0 +1,4 @@
+.choices {
+    @include separator;
+    @include container($ipad);
+}

@@ -10,7 +10,7 @@
     display: block;
     max-width: 250px;
     height: 250px;
-    background: rgb(46, 176, 199);
+    background: rgba($color: #000000, $alpha: 1.0);
 
     img {
       @include img-wrap;
