@@ -1,0 +1,41 @@
+.image-hover {
+  @include container;
+  @include separator;
+
+  .wrapper {
+    @include flex(row, space-between, flex-start, 20px)
+  }
+
+  .card {
+    display: block;
+    max-width: 250px;
+    height: 250px;
+    background: rgb(46, 176, 199);
+
+    img {
+      @include img-wrap;
+      object-fit: cover;
+    }
+
+    figcaption {
+      color: #fff;
+      display: grid;
+      place-items: center;
+      background: rgb(62, 194, 218);
+
+      h2 {
+        color: #fff;
+        position: relative;
+        width: fit-content;
+        margin-bottom: 20px;
+        &::after {
+          @include pseudo;
+          width: 100%;
+          height: 2px;
+          background:#fff ;
+          bottom: -10px;
+        }
+      }
+    }
+  }
+}

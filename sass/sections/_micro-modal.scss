@@ -1,0 +1,32 @@
+.micro-modal {
+  @include container($ipad);
+  @include separator();
+  background: #000;
+
+  .wrapper {
+    display: grid;
+    place-items: center;
+  }
+
+  button {
+    padding: 20px;
+  }
+}
+
+.modal-title {
+  @include flex(row, flex-start, center, 20px);
+  img {
+    width: 150px;
+    height: 170px;
+    object-fit: cover;
+  }
+  margin-bottom: 30px;
+}
+
+.modal-content {
+  margin-top: 30px;
+
+  .tiptool {
+    color: rgb(51, 84, 190);
+  }
+}

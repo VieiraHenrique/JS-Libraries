@@ -324,6 +324,7 @@
       
     -->
 
+    <h2 class="title">CONTAINER</h2>
     <div class="hero">
       <div class="hero__text--bg"></div>
       <div class="hero__text">
@@ -341,21 +342,214 @@
       </div>
     </div>
 
-    <!-- MODAL -->
+    <!--
+      MICRO-MODAL
+      https://micromodal.vercel.app/
 
-    <div class="modal">
-      <button onclick="modal.open()">OPEN MODAL</button>
-      <div class="modal__content">
-        <h2>Hello World</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
-          obcaecati atque mollitia illum quae?
-        </p>
-      </div>
-      <div class="modal__content--footer">
-        
+      Structure :
+
+      modal#modal-id
+        .modal overlay
+          .modal__container
+            header
+            .modal-content
+
+
+    <button class="btn-wave" data-micromodal-trigger="modal-1">
+          Open Modal
+        </button>
+
+
+    <div class="modal" id="modal-1" aria-hidden="true">
+      <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal-header">
+            <h2 id="modal-1-title">Modal Title</h2>
+            <button aria-label="Close modal" data-micromodal-close></button>
+          </header>
+          <div class="modal-content" id="modal-1-content">Modal Content</div>
+        </div>
       </div>
     </div>
+
+    -->
+    <h2 class="title">MICRO MODAL</h2>
+    <section class="micro-modal">
+      <div class="wrapper">
+        <button class="btn-wave" data-micromodal-trigger="modal-1">
+          Open Modal
+        </button>
+      </div>
+    </section>
+
+    <div class="modal" id="modal-1" aria-hidden="true">
+      <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal-container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <header class="modal-header">
+            <div class="modal-title">
+              <img src="/img/slide1.jpg" alt="" />
+              <div>
+                <h2 id="modal-1-title">Mountain</h2>
+                <p>Here are some infos on mountains</p>
+              </div>
+            </div>
+
+            <button
+              class="modal-close"
+              aria-label="Close modal"
+              data-micromodal-close
+            >
+              <span></span>
+            </button>
+          </header>
+
+          <hr />
+
+          <div class="modal-content" id="modal-1-content">
+            <h3>Biography</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta
+              necessitatibus odit exercitationem quae officiis, porro
+              consequatur iusto minus.
+              <span
+                class="tiptool"
+                data-tippy-content="Some word in latin Some word in latin"
+                >Laborum</span
+              >, officia. Facilis, suscipit odit!
+            </p>
+            <h3>History</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et soluta
+              necessitatibus odit exercitationem quae officiis, porro
+              consequatur iusto minus. Laborum, officia. Facilis, suscipit odit!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    FULL PAGE
+  -->
+
+    <!--
+      <div id="fullpage">
+      <section class="section">Hello world</section>
+      <section class="section">Hello world</section>
+    </div>
+  -->
+
+    <!--
+    IMAGE HOVER CSS
+    http://www.imagehover.io/
+
+    Structure:
+
+    figure.imghvr-push-up
+      img
+      figcaption
+      a
+    
+    To style the figure, add a class like "card". To style the bg color, apply background to .card and .figcaption
+  -->
+
+    <h2 class="title">IMAGE HOVER</h2>
+
+    <section class="image-hover">
+      <div class="wrapper">
+        <figure class="card imghvr-hinge-up">
+          <img src="/img/slide2.jpg" alt="" />
+          <figcaption>
+            <div>
+              <h2>Hello World</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </figcaption>
+          <a href="https://www.google.com/"></a>
+        </figure>
+        <figure class="card imghvr-flip-horiz">
+          <img src="/img/slide2.jpg" alt="" />
+          <figcaption>
+            <div>
+              <h2>Hello World</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </figcaption>
+          <a href="https://www.google.com/"></a>
+        </figure>
+        <figure class="card imghvr-shutter-out-diag-2">
+          <img src="/img/slide2.jpg" alt="" />
+          <figcaption>
+            <div>
+              <h2>Hello World</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </figcaption>
+          <a href="https://www.google.com/"></a>
+        </figure>
+        <figure class="card imghvr-fold-right">
+          <img src="/img/slide2.jpg" alt="" />
+          <figcaption>
+            <div>
+              <h2>Hello World</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </figcaption>
+          <a href="https://www.google.com/"></a>
+        </figure>
+      </div>
+    </section>
+
+    <!--
+    HOVER BUTTONS
+    https://varin6.github.io/Hover-Buttons/
+
+    Check classes for the specific hover effect.
+    To style, use the class .hbtn and set backgorund, border-color, color, ::before background and :hover color
+
+    .hbtn {
+      display: block;
+      background: transparent;
+      border-color: #fff;
+
+      &::before {
+          background: #fff;
+      }
+
+      &:hover {
+          color: #000;
+      }
+  }
+    -->
+
+    <h2 class="title">HOVER BUTTONS</h2>
+
+    <section class="hover">
+      <div class="wrapper">
+        <a href="#" class="hbtn hb-fill-top hpill">CLICK ME</a>
+        <a href="#" class="color-white hbtn hb-border-bottom-br3 hbor1 hpad2"
+          >CLICK ME</a
+        >
+        <a href="#" class="color-white hbtn hb-fill-middle-rev hpad2 hbor1"
+          >CLICK ME</a
+        >
+        <a
+          href="#"
+          class="color-white hbtn hb-fill-middle2-rev hbor1 hpad2 hpill"
+          >CLICK ME</a
+        >
+        <a
+          href="#"
+          class="color-white hbtn hb-border-bottom-br3 hpad2 hpill hbor1"
+          >CLICK ME</a
+        >
+      </div>
+    </section>
 
     <!-- CDN -->
 
@@ -365,7 +559,8 @@
     <script src="js/libraries/aos.js"></script>
     <script src="js/libraries/popper.js"></script>
     <script src="js/libraries/tippy.js"></script>
-    <script src="js/libraries/tingle.js"></script>
+    <script src="js/libraries/micro-modal.js"></script>
+    <!--<script src="js/libraries/fullPage.js"></script>-->
 
     <!-- SCRIPTS -->
 
@@ -374,6 +569,7 @@
     <script src="js/sections/isotope.js"></script>
     <script src="js/sections/aos.js"></script>
     <script src="js/sections/tippy.js"></script>
-    <script src="js/sections/tingle.js"></script>
+    <script src="js/sections/micro-modal.js"></script>
+    <!--<script src="js/sections/fullPage.js"></script>-->
   </body>
 </html>

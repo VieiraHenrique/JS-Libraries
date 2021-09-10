@@ -1,0 +1,29 @@
+.hover {
+  @include container;
+  @include separator;
+
+  .wrapper {
+    @include flex(row, center, flex-start, 30px);
+  }
+
+  .hbtn {
+      display: block;
+      background: transparent;
+      border-color: #fff;
+      padding: 15px 25px;
+
+      &::before {
+          background: #fff;
+      }
+
+      &:hover {
+          color: #000;
+      }
+  }
+
+  .color-white {
+    &:hover {
+        color: #fff;
+    }
+  }
+}

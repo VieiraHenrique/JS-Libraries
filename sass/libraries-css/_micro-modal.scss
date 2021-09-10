@@ -1,0 +1,68 @@
+/* THIS IS A CUSTOM BASE CSS TEMPLATE FOR MICRO-MODALS, ONCE IT DOESN'T HAVE ANY CSS NATIVELY */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(20px);
+}
+
+.modal-container {
+  background-color: #fff;
+  padding: 30px;
+  max-width: 740px;
+  height: fit-content;
+  height: -moz-fit-content;
+  width: 50%;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    background: transparent;
+
+    span,
+    span::after {
+      display: block;
+      width: 15px;
+      height: 2px;
+      background: black;
+      position: relative;
+      transform: rotate(45deg);
+    }
+    span::after {
+      content: '';
+      position: absolute;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}

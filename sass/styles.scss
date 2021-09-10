@@ -1,8 +1,11 @@
 @import "libraries-css/accordion";
 @import "libraries-css/aos";
 @import "libraries-css/swiper";
-@import "libraries-css/tingle";
 @import "libraries-css/tippy";
+@import "libraries-css/micro-modal";
+@import "libraries-css/fullPage";
+@import "libraries-css/image-hover/imagehover";
+@import "libraries-css/hoverbuttons";
 
 @import "utilities/vars";
 @import "utilities/mixins";
@@ -15,4 +18,6 @@
 @import "sections/aos";
 @import "sections/tippy";
 @import "sections/container";
-@import "sections/tingle";
+@import "sections/micro-modal";
+@import "sections/image-hover";
+@import "sections/hoverbuttons";
