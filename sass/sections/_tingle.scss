@@ -1,0 +1,10 @@
+.modal {
+    @include separator;
+    @include container($ipad);
+
+    &__content {
+        display: none;
+    }
+
+}
+

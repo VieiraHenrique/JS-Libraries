@@ -1,25 +1,23 @@
-.container {
-  @include container;
+.hero {
   @include separator;
+  @include container($laptop);
+  color: white;
 
-  .left {
-    grid-column: full-start/ col-end 10;
-    background: $blue;
-    color: $white;
-    padding: 50px 10%;
-    grid-row: 1;
+  &__text {
 
-    p {
-      color: $text;
-      margin: 10px 0 30px;
-      max-width: 70%;
+    &--bg {
+      grid-column: 1/9;
+      background: red;
+      grid-row: 1;
     }
+    
+    grid-column: 2/9;
+    grid-row: 1;
   }
 
-  .right {
-    grid-column: col-start 11 / full-end;
-    background: $white;
-    padding: 50px 10%;
+  &__img {
+    grid-column: 9/-2;
+    background: green;
     grid-row: 1;
   }
 }

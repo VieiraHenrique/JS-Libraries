@@ -50,6 +50,7 @@
   row-gap: $row-gap;
 }
 
+$pc: 1920px;
 $laptop: 1440px;
 $ipadPro: 1024px;
 $ipad: 768px;
@@ -116,7 +117,7 @@ $ipad: 768px;
   background-repeat: no-repeat;
 }
 
-@mixin widthFit {
+@mixin fitContent {
   width: -moz-fit-content;
   width: fit-content;
 }

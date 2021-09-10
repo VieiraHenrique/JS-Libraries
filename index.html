@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS LIBRARIES</title>
-    <link rel="stylesheet" href="libraries-css/swiper.css" />
-    <link rel="stylesheet" href="libraries-css/accordion.css" />
-    <link rel="stylesheet" href="libraries-css/aos.css" />
-    <link rel="stylesheet" href="libraries-css/tippy.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -328,78 +324,38 @@
       
     -->
 
-    <section class="container">
-      <div class="left">
+    <div class="hero">
+      <div class="hero__text--bg"></div>
+      <div class="hero__text">
         <h2>Title</h2>
+        <h3>Subtitle</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-          voluptates maiores, vel aspernatur, soluta ducimus quod a nobis
-          mollitia architecto dolores!
-        </p>
-        <a href="#" class="btn">I am a button</a>
-      </div>
-      <div class="right">
-        <h2>This is the title of the right part</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
-          saepe aliquid ipsum hic velit beatae ducimus unde cupiditate deleniti
-          sunt enim, sint veritatis facilis. Natus expedita quidem labore
-          temporibus eligendi, culpa voluptate rerum enim dignissimos,
-          blanditiis doloremque amet quod ipsa cum nihil ad dolor.
-          Necessitatibus, blanditiis.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+          autem beatae commodi modi ex, dolorem, temporibus, unde nihil qui
+          repudiandae harum amet veniam iste ut libero est.
         </p>
       </div>
-    </section>
+      <div class="hero__img--bg"></div>
+      <div class="hero__img">
+        <h2>There is an image in this section</h2>
+      </div>
+    </div>
 
-    <section class="container2">
-      <div class="wrapper">
-        <div class="bg_left"></div>
-        <div class="left">
-          <h2>Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-            voluptates maiores, vel aspernatur, soluta ducimus quod a nobis
-            mollitia architecto dolores!
-          </p>
-          <a href="#" class="btn">I am a button</a>
-        </div>
-        <div class="bg_right"></div>
-        <div class="right">
-          <h2>This is the title of the right part</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
-            saepe aliquid ipsum hic velit beatae ducimus unde cupiditate
-            deleniti sunt enim, sint veritatis facilis. Natus expedita quidem
-            labore temporibus eligendi, culpa voluptate rerum enim dignissimos,
-            blanditiis doloremque amet quod ipsa cum nihil ad dolor.
-            Necessitatibus, blanditiis.
-          </p>
-        </div>
+    <!-- MODAL -->
+
+    <div class="modal">
+      <button onclick="modal.open()">OPEN MODAL</button>
+      <div class="modal__content">
+        <h2>Hello World</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          obcaecati atque mollitia illum quae?
+        </p>
       </div>
-      <div class="wrapper2">
-        <div class="bg_left"></div>
-        <div class="left">
-          <h2>Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-            voluptates maiores, vel aspernatur, soluta ducimus quod a nobis
-            mollitia architecto dolores!
-          </p>
-          <a href="#" class="btn">I am a button</a>
-        </div>
-        <div class="right">
-          <h2>This is the title of the right part</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
-            saepe aliquid ipsum hic velit beatae ducimus unde cupiditate
-            deleniti sunt enim, sint veritatis facilis. Natus expedita quidem
-            labore temporibus eligendi, culpa voluptate rerum enim dignissimos,
-            blanditiis doloremque amet quod ipsa cum nihil ad dolor.
-            Necessitatibus, blanditiis.
-          </p>
-        </div>
+      <div class="modal__content--footer">
+        
       </div>
-    </section>
+    </div>
 
     <!-- CDN -->
 
@@ -409,6 +365,7 @@
     <script src="js/libraries/aos.js"></script>
     <script src="js/libraries/popper.js"></script>
     <script src="js/libraries/tippy.js"></script>
+    <script src="js/libraries/tingle.js"></script>
 
     <!-- SCRIPTS -->
 
@@ -417,5 +374,6 @@
     <script src="js/sections/isotope.js"></script>
     <script src="js/sections/aos.js"></script>
     <script src="js/sections/tippy.js"></script>
+    <script src="js/sections/tingle.js"></script>
   </body>
 </html>
