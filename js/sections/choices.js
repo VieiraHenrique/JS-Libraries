@@ -1,4 +1,4 @@
-const choices = new Choices('#choices', {
-    searchEnabled: true,
-    itemSelectText: '',
+const choices = new Choices("#choices", {
+  searchEnabled: true,
+  itemSelectText: "",
 });
