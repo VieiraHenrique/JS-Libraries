@@ -1,4 +1,4 @@
 const choices = new Choices("#choices", {
-  searchEnabled: true,
+  searchEnabled: false,
   itemSelectText: "",
 });

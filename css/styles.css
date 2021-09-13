@@ -7369,7 +7369,7 @@ textarea {
   color: #fff;
 }
 
-.choices {
+.choices-container {
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 50px;
@@ -7378,7 +7378,40 @@ textarea {
   grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
 }
 
-.choices > * {
+.choices-container > * {
   grid-column: container-start / container-end;
+}
+
+.choices-container .choices__inner {
+  background: #f6d4a0;
+}
+
+.choices-container .choices__list--single {
+  font-size: 20px;
+}
+
+.choices-container .choices__list--dropdown {
+  background: #f5e7ce;
+}
+
+.choices-container .choices__item--selectable {
+  font-size: 20px;
+}
+
+.choices-container .choices__item--selectable.is-highlighted {
+  background-color: #da7e01;
+  color: white;
+}
+
+.choices-container .choices[data-type*="select-one"]:after {
+  border: none;
+}
+
+.choices-container .choices:hover[data-type*="select-one"]:after {
+  background: green;
+}
+
+.choices-container .choices[data-type*="select-one"].is-open:after {
+  background: blue;
 }
 /*# sourceMappingURL=styles.css.map */

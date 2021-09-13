@@ -1,4 +1,45 @@
-.choices {
-    @include separator;
-    @include container($ipad);
+.choices-container {
+  @include separator;
+  @include container($ipad);
+
+  // Main select container
+  .choices__inner {
+    background: rgb(246, 212, 160);
+  }
+
+  // Text in the main select
+  .choices__list--single {
+    font-size: 20px;
+  }
+
+  // Dropdown menu
+  .choices__list--dropdown {
+    background: rgb(245, 231, 206);
+  }
+
+  // Element in dropdown menu
+  .choices__item--selectable {
+    font-size: 20px;
+  }
+
+  // Hover of element in dropdown menu
+  .choices__item--selectable.is-highlighted {
+    background-color: #da7e01;
+    color: white;
+  }
+
+  // Arrow (The original arrow is done with borders. Place image if needed)
+  .choices[data-type*="select-one"]:after {
+    border: none;
+  }
+
+  // Arrow when hover
+  .choices:hover[data-type*="select-one"]:after {
+    background: green;
+  }
+
+  // Arrow when dropdown is open
+  .choices[data-type*="select-one"].is-open:after {
+    background: blue;
+  }
 }
