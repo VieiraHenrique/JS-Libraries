@@ -1,28 +1,34 @@
+$ipad: 768px;
+$ipadPro: 1024px;
+$laptop13: 1280px;
+$laptop: 1440px;
+$pc: 1920px;
+
 /* MEDIA QUERIES */
 
 @mixin ipad() {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $ipad) {
     @content;
   }
 }
 @mixin ipadPro() {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $ipadPro) {
     @content;
   }
 }
 @mixin laptop13() {
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $laptop13) {
     @content;
   }
 }
 @mixin laptop() {
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $laptop) {
     @content;
   }
 }
 
 @mixin pc() {
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: $pc) {
     @content;
   }
 }
@@ -49,11 +55,6 @@
   column-gap: $columns-gap;
   row-gap: $row-gap;
 }
-
-$pc: 1920px;
-$laptop: 1440px;
-$ipadPro: 1024px;
-$ipad: 768px;
 
 @mixin container($max-width: 1440px) {
   display: grid;

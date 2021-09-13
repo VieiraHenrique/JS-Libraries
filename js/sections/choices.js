@@ -4,5 +4,4 @@ const choices = new Choices("#choices", {
   placeholderValue: false,
   position: "bottom",
   shouldSort: false,
-
 });
