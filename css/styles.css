@@ -7376,7 +7376,6 @@ textarea {
   padding-bottom: 50px;
   display: grid;
   grid-template-columns: [full-start] minmax(20px, 1fr) [container-start] repeat(12, [col-start] minmax(22px, 64px) [col-end]) [container-end] minmax(20px, 1fr) [full-end];
-  margin-bottom: 300px;
   /* CUSTOM */
 }
 
@@ -7435,5 +7434,44 @@ textarea {
 .choices-container .is-open .choices__inner {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.tilt .wrapper {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.tilt .tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  padding: 50px 30px;
+  width: 460px;
+  background: linear-gradient(to bottom right, #cc6363, #7e3939);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.tilt .tilt-card__wrapper {
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tilt .tilt-card__wrapper h2 {
+  transform: translateZ(15px);
+}
+
+.tilt .tilt-card__wrapper p {
+  transform: translateZ(10px);
+  color: #eaeaea;
+  text-align: center;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,6 @@
 .choices-container {
   @include separator;
   @include container($ipad);
-  margin-bottom: 300px;
 
   // Main select container
   .choices__inner {

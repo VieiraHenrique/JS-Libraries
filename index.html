@@ -585,12 +585,38 @@
 
     <!--
       TILT.JS
+      
+
+      Just add "data-tilt" to the div for the basic form.
+      If you want to have more options, you have to init it in JS.
+
+      VanillaTilt.init(document.querySelector(".your-element"), {
+        max: 25,
+        speed: 400
+      });
+      
+      For more options check url below.
+
+      https://micku7zu.github.io/vanilla-tilt.js/
     -->
+
+    <h2 class="title">TILT.JS</h2>
 
     <section class="tilt">
       <div class="wrapper">
-        <div class="card">
-          
+        <div class="tilt-card">
+          <div class="tilt-card__wrapper">
+            <h2>Card title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="hbtn hb-fill-middle2-rev hpill">Click me</a>
+          </div>
+        </div>
+        <div class="tilt-card">
+          <div class="tilt-card__wrapper">
+            <h2>Card title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="hbtn hb-fill-middle2-rev hpill">Click me</a>
+          </div>
         </div>
       </div>
     </section>
@@ -605,8 +631,7 @@
     <script src="js/libraries/tippy.js"></script>
     <script src="js/libraries/micro-modal.js"></script>
     <script src="js/libraries/choices.js"></script>
-
-    <!--<script src="js/libraries/fullPage.js"></script>-->
+    <script src="js/libraries/tilt.js"></script>
 
     <!-- SCRIPTS -->
 
@@ -617,7 +642,6 @@
     <script src="js/sections/tippy.js"></script>
     <script src="js/sections/micro-modal.js"></script>
     <script src="js/sections/choices.js"></script>
-
-    <!--<script src="js/sections/fullPage.js"></script>-->
+    <script src="js/sections/tilt.js"></script>
   </body>
 </html>
