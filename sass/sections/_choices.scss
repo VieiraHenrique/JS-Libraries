@@ -1,25 +1,33 @@
 .choices-container {
   @include separator;
   @include container($ipad);
+  margin-bottom: 300px;
 
   // Main select container
   .choices__inner {
     background: rgb(246, 212, 160);
+    border-radius: 30px;
   }
 
   // Text in the main select
   .choices__list--single {
     font-size: 20px;
+    padding: 10px 20px;
   }
 
   // Dropdown menu
   .choices__list--dropdown {
     background: rgb(245, 231, 206);
+    border: none;
   }
 
   // Element in dropdown menu
   .choices__item--selectable {
     font-size: 20px;
+  }
+
+  .choices__item {
+
   }
 
   // Hover of element in dropdown menu
@@ -31,15 +39,37 @@
   // Arrow (The original arrow is done with borders. Place image if needed)
   .choices[data-type*="select-one"]:after {
     border: none;
+    width: 20px;
+    height: 20px;
+    background: url("/img/arrow-alt-circle-down-solid.png");
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-30%);
   }
 
   // Arrow when hover
   .choices:hover[data-type*="select-one"]:after {
-    background: green;
   }
 
   // Arrow when dropdown is open
   .choices[data-type*="select-one"].is-open:after {
-    background: blue;
+    border: none;
+    width: 20px;
+    height: 20px;
+    background: url("/img/arrow-alt-circle-up-solid.png");
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-30%);
+  }
+
+  /* CUSTOM */
+
+  .is-open .choices__inner {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
