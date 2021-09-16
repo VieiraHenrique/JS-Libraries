@@ -1,3 +1,4 @@
+@import "libraries-css/navigation";
 @import "libraries-css/accordion";
 @import "libraries-css/aos";
 @import "libraries-css/swiper";
@@ -13,6 +14,7 @@
 @import "utilities/reset";
 @import "utilities/common-classes";
 
+@import "sections/navigation";
 @import "sections/swiper";
 @import "sections/accordion";
 @import "sections/isotope";

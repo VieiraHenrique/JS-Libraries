@@ -1,0 +1,16 @@
+.navigation-social-menu {
+    i {
+        background-color: $main-color !important;
+        color: $white;
+        @include transition;
+
+        &:hover {
+            background-color: #eaeaea !important;
+            color: $main-color;
+        }
+    }
+}
+
+.navigation-inline-form {
+    width: 250px;
+}
